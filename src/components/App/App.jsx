@@ -1,9 +1,11 @@
 import React from 'react';
 
+import WeatherApp from '../WeatherApp/WeatherApp';
+
 const App = () => {
     return (
         <div className="App">
-            <h1>Hello World</h1>
+            <WeatherApp />
         </div>
     );
 };
