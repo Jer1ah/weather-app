@@ -1,0 +1,19 @@
+.header {
+    background-color: purple;
+    height: 5rem;
+    padding: .1rem;
+    color: white;
+}
+
+.header h2 {
+    margin-left: 3rem;
+    margin-top: .75rem;
+    font-size: 1.75rem;
+}
+
+.header span {
+    margin-left: 3rem;
+    margin-top: .5rem;
+    font-size: 1rem;
+    opacity: .75;
+}

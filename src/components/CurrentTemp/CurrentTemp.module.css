@@ -1,0 +1,31 @@
+.currentTemp {
+    background-color: pink;
+    position: relative;
+    height: 12rem;
+    width: 90%;
+    margin-bottom: 1rem;
+}
+
+.currentTemp img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.currentTemp h3 {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+}
+
+.currentTemp span {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+}

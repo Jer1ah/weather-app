@@ -1,0 +1,25 @@
+.hourly {
+    height: 12rem;
+    background-color: pink;
+    width: 90%;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 95%;
+    margin-top: .2rem;
+}
+
+.listItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darkmagenta;
+    width: 30%;
+    height: 100%;
+}

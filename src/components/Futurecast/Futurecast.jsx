@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './Futurecast.module.css';
 
 const Futurecast = () => {
     return (
-        <div className="futurecast">
+        <div className={styles.futurecast}>
             <ul className="futurecast__list">
                 <li className="futurecast__listItem">
                     <h4>Thursday</h4>
