@@ -1,7 +1,11 @@
 .hourly {
-    height: 12rem;
-    background-color: pink;
-    width: 90%;
+    height: 13rem;
+    background-color: #652BD7;
+    width: 92%;
+    border-radius: .3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .list {
@@ -10,8 +14,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 95%;
-    margin-top: .2rem;
+    height: 90%;
+    width: 95%;
 }
 
 .listItem {
@@ -19,7 +23,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: darkmagenta;
-    width: 30%;
+    background-color: #5A1FCD;
+    color: white;
+    width: 30.5%;
     height: 100%;
+    border-radius: .3rem;
+}
+
+.listItem img {
+    width: 3.3rem;
+    opacity: .75;
+    margin: .75rem 0;
+}
+
+.listItem h5 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.listItem span {
+    font-size: 1.85rem;
+    font-weight: 600;
 }

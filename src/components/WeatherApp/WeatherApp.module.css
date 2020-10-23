@@ -1,8 +1,8 @@
 .weatherApp {
-    background-color: #bbb;
+    background-color: #5A1FCD;
     width: 70rem;
-    margin-top: 2rem;
-    border-radius: .5rem;
+    margin-top: 5rem;
+    border-radius: .3rem;
     height: 35rem;
     overflow: hidden;
 }
@@ -12,5 +12,5 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    margin-top: .5rem;
+    margin-top: 1rem;
 }

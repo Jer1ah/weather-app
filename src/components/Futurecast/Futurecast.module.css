@@ -1,6 +1,5 @@
 .futurecast {
     flex: 5;
-    min-height: 100%;
 }
 
 .list {
@@ -8,8 +7,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: space-between;
-    width: 100%;
-    height: 25rem;
+    width: 98.5%;
+    height: 26rem;
 }
 
 .listItem {
@@ -17,6 +16,40 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: purple;
-    height: 17.5%;
+    background-color: #652BD7;
+    color: white;
+    height: 18%;
+    border-radius: .3rem;
+}
+
+.listItem h4 {
+    width: 5rem;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+}
+
+.listItem img {
+    width: 3rem;
+    opacity: .75;
+}
+
+.highTemp, .lowTemp, .rainChance {
+    width: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.highTemp h5, .lowTemp h5, .rainChance h5 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.highTemp span, .lowTemp span, .rainChance span {
+    font-size: .88rem;
+    opacity: .75;
+    letter-spacing: .1rem;
 }
