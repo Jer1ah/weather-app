@@ -3,6 +3,7 @@
     width: 70rem;
     margin-top: 2rem;
     border-radius: .5rem;
+    height: 35rem;
     overflow: hidden;
 }
 
@@ -11,5 +12,5 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: .5rem;
 }
