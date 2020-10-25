@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 
-const dummyReducer = (state='', action) => {
+const currentDateReducer = (state='', action) => {
     switch(action.type) {
-        case 'GET_DATA':
+        case 'GET_DATE':
             return action.payload
         default:
             return state;
@@ -10,5 +10,5 @@ const dummyReducer = (state='', action) => {
 };
 
 export default combineReducers({
-    dummy: dummyReducer
+    currentDate: currentDateReducer
 });
