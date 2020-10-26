@@ -1,30 +1,45 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import styles from './Hourly.module.css';
+
+import { getHours } from '../../actions';
 
 import image from '../../images/cloudy.svg';
 
-const Hourly = () => {
-    return (
-        <div className={styles.hourly}>
-            <ul className={styles.list}>
-                <li className={styles.listItem}>
-                    <h5>3pm</h5>
-                    <img src={image} alt="Weather Icon"/>
-                    <span>39&deg;</span>
-                </li>
-                <li className={styles.listItem}>
-                <h5>4pm</h5>
-                    <img src={image} alt="Weather Icon"/>
-                    <span>40&deg;</span>
-                </li>
-                <li className={styles.listItem}>
-                <h5>5pm</h5>
-                    <img src={image} alt="Weather Icon"/>
-                    <span>38&deg;</span>
-                </li>
-            </ul>
-        </div>
-    );
+class Hourly extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        this.props.getHours();
+    }
+
+    render() {
+        const listItems = this.props.hours.map((item, index) => {
+            return <li className={styles.listItem}>
+                        <h5>{item}</h5>
+                        <img src={image} alt="Weather Icon"/>
+                        <span>39&deg;</span>
+                    </li>
+        });
+
+        return (
+            <div className={styles.hourly}>
+                <ul className={styles.list}>
+                    {listItems}
+                </ul>
+            </div>
+        );
+    }
 };
 
-export default Hourly;
+const mapStateToProps = (state) => {
+    return {
+        hours: state.hoursList
+    };
+};
+
+export default connect(mapStateToProps, {
+    getHours
+})(Hourly);
