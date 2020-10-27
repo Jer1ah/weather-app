@@ -4,7 +4,7 @@ import styles from './Hourly.module.css';
 
 import { getHours } from '../../actions';
 
-import image from '../../images/cloudy.svg';
+import image from '../../images/storm.svg';
 
 class Hourly extends Component {
     constructor(props) {
