@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styles from './Header.module.css';
 
-import { getCurrentDate } from '../../actions';
+import { getCurrentDate, getCurrentWeather } from '../../actions';
 
 class Header extends Component {
     constructor(props) {
@@ -11,12 +11,13 @@ class Header extends Component {
 
     componentDidMount() {
         this.props.getCurrentDate();
+        this.props.getCurrentWeather();
     }
 
     render() {
         return (
             <div className={styles.header}>
-                <h2>Charlotte, North Carolina</h2>
+                <h2>{this.props.city}, {this.props.state}</h2>
                 <span>{this.props.currentDate}</span>
             </div>
         );
@@ -24,11 +25,18 @@ class Header extends Component {
 };
 
 const MapStateToProps = (state) => {
-    return {
-        currentDate: state.currentDate
-    };
+    if(state.location.AdministrativeArea) {
+        return {
+            currentDate: state.currentDate,
+            city: state.location.LocalizedName,
+            state: state.location.AdministrativeArea.LocalizedName
+        };
+    } else {
+        return {};
+    }
 };
 
 export default connect(MapStateToProps, {
-    getCurrentDate
+    getCurrentDate,
+    getCurrentWeather
 })(Header);

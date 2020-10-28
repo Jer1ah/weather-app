@@ -27,8 +27,28 @@ const hoursReducer = (state=[], action) => {
     }
 };
 
+const locationReducer = (state=[], action) => {
+    switch(action.type) {
+        case 'GET_LOCATION':
+                return action.payload;
+            default:
+                return state;
+    }
+};
+
+const currentWeatherReducer = (state=[], action) => {
+    switch(action.type) {
+        case 'GET_CURRENT_WEATHER':
+            return action.payload;
+        default:
+            return state;
+    }
+};
+
 export default combineReducers({
     currentDate: currentDateReducer,
     daysOfWeek: daysOfWeekReducer,
-    hoursList: hoursReducer
+    hoursList: hoursReducer,
+    location: locationReducer,
+    currentWeather: currentWeatherReducer
 });

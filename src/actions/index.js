@@ -1,4 +1,5 @@
 import moment from 'moment';
+import axios from 'axios';
 
 export const getCurrentDate = () => {
     return {
@@ -29,4 +30,18 @@ export const getHours = () => {
             moment().add('3', 'hours').format('ha')
         ]
     }
+};
+
+export const getLocation = () => {
+    return async (dispatch) => {
+        const data = await axios.get(`http://dataservice.accuweather.com/locations/v1/postalcodes/search?apikey=yjhc9euukkwR393enGgBNNlSaIA1i0T4&q=28124`);
+        dispatch({ type: 'GET_LOCATION', payload: data.data[0] });
+    }
+};
+
+export const getCurrentWeather = () => {
+    return async (dispatch) => {
+        const data = await axios.get(`http://dataservice.accuweather.com/currentconditions/v1/11694_PC?apikey=yjhc9euukkwR393enGgBNNlSaIA1i0T4&details=true`);
+        dispatch({ type: 'GET_CURRENT_WEATHER', payload: data.data[0] });
+    };
 };
