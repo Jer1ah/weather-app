@@ -45,3 +45,10 @@ export const getCurrentWeather = () => {
         dispatch({ type: 'GET_CURRENT_WEATHER', payload: data.data[0] });
     };
 };
+
+export const getHourlyForecast = () => {
+    return async (dispatch) => {
+        const data = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/11694_PC?apikey=yjhc9euukkwR393enGgBNNlSaIA1i0T4`);
+        dispatch({ type: 'GET_HOURLY_FORECAST', payload: data.data });
+    }
+};

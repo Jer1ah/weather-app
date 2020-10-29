@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styles from './Header.module.css';
 
-import { getCurrentDate, getCurrentWeather } from '../../actions';
+import { getCurrentDate, 
+        getCurrentWeather,
+        getHourlyForecast
+} from '../../actions';
 
 class Header extends Component {
     constructor(props) {
@@ -12,6 +15,7 @@ class Header extends Component {
     componentDidMount() {
         this.props.getCurrentDate();
         this.props.getCurrentWeather();
+        this.props.getHourlyForecast();
     }
 
     render() {
@@ -38,5 +42,6 @@ const MapStateToProps = (state) => {
 
 export default connect(MapStateToProps, {
     getCurrentDate,
-    getCurrentWeather
+    getCurrentWeather,
+    getHourlyForecast
 })(Header);

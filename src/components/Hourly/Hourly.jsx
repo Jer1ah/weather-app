@@ -16,18 +16,22 @@ class Hourly extends Component {
     }
 
     render() {
-        const listItems = this.props.hours.map((item, index) => {
-            return <li className={styles.listItem}>
-                        <h5>{item}</h5>
-                        <img src={image} alt="Weather Icon"/>
-                        <span>39&deg;</span>
-                    </li>
-        });
+        let listItems;
+
+        if(this.props.hourlyForecast[1]) {
+            listItems = this.props.hours.map((item, index) => {
+                return <li className={styles.listItem}>
+                            <h5>{item}</h5>
+                            <img src={image} alt="Weather Icon"/>
+                            <span>{this.props.hourlyForecast[index].Temperature.Value}&deg;</span>
+                        </li>
+            });
+        }
 
         return (
             <div className={styles.hourly}>
                 <ul className={styles.list}>
-                    {listItems}
+                    {listItems ? listItems : null}
                 </ul>
             </div>
         );
@@ -36,8 +40,9 @@ class Hourly extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        hours: state.hoursList
-    };
+        hours: state.hoursList,
+        hourlyForecast: state.hourlyForecast
+    }
 };
 
 export default connect(mapStateToProps, {
