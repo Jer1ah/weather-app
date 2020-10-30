@@ -16,29 +16,32 @@ class Futurecast extends Component {
     }
 
     render() {
-        const listItems = this.props.daysOfWeek.map((item, index) => {
-            return <li className={styles.listItem}>
-                <h4>{item}</h4>
-                <img src={image} alt="Weather Icon"/>
-                <div className={styles.highTemp}>
-                    <span>high</span>
-                    <h5>54&deg;</h5>
-                </div>
-                <div className={styles.lowTemp}>
-                    <span>low</span>
-                    <h5>34&deg;</h5>
-                </div>
-                <div className={styles.rainChance}>
-                    <span>rain</span>
-                    <h5>13%</h5>
-                </div>
-            </li>
-        })
+        let listItems;
+        if(this.props.dailyForecast[0]) {
+            listItems = this.props.daysOfWeek.map((item, index) => {
+                return <li className={styles.listItem}>
+                    <h4>{item}</h4>
+                    <img src={image} alt="Weather Icon"/>
+                    <div className={styles.highTemp}>
+                        <span>high</span>
+                        <h5>{this.props.dailyForecast[index].Temperature.Maximum.Value}&deg;</h5>
+                    </div>
+                    <div className={styles.lowTemp}>
+                        <span>low</span>
+                        <h5>{this.props.dailyForecast[index].Temperature.Minimum.Value}&deg;</h5>
+                    </div>
+                    <div className={styles.rainChance}>
+                        <span>rain</span>
+                        <h5>{this.props.dailyForecast[index].Day.PrecipitationProbability}%</h5>
+                    </div>
+                </li>
+            });
+        }
 
         return (
             <div className={styles.futurecast}>
                 <ul className={styles.list}>
-                    {listItems}
+                    {listItems ? listItems : null}
                 </ul>
             </div>
         );
@@ -47,7 +50,8 @@ class Futurecast extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        daysOfWeek: state.daysOfWeek
+        daysOfWeek: state.daysOfWeek,
+        dailyForecast: state.dailyForecast
     };
 };
 

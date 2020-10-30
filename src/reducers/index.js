@@ -54,11 +54,21 @@ const hourlyForecastReducer = (state=[], action) => {
     }
 };
 
+const dailyForecastReducer = (state=[], action) => {
+    switch(action.type) {
+        case 'GET_DAILY_FORECAST':
+            return action.payload;
+        default:
+            return state; 
+    }
+};
+
 export default combineReducers({
     currentDate: currentDateReducer,
     daysOfWeek: daysOfWeekReducer,
     hoursList: hoursReducer,
     location: locationReducer,
     currentWeather: currentWeatherReducer,
-    hourlyForecast: hourlyForecastReducer
+    hourlyForecast: hourlyForecastReducer,
+    dailyForecast: dailyForecastReducer
 });

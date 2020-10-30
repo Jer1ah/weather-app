@@ -52,3 +52,10 @@ export const getHourlyForecast = () => {
         dispatch({ type: 'GET_HOURLY_FORECAST', payload: data.data });
     }
 };
+
+export const getDailyForecast = () => {
+    return async (dispatch) => {
+        const data = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/11694_PC?apikey=yjhc9euukkwR393enGgBNNlSaIA1i0T4&details=true`);
+        dispatch({ type: 'GET_DAILY_FORECAST', payload: data.data.DailyForecasts });
+    }
+};

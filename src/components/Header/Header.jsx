@@ -4,7 +4,8 @@ import styles from './Header.module.css';
 
 import { getCurrentDate, 
         getCurrentWeather,
-        getHourlyForecast
+        getHourlyForecast,
+        getDailyForecast
 } from '../../actions';
 
 class Header extends Component {
@@ -16,6 +17,7 @@ class Header extends Component {
         this.props.getCurrentDate();
         this.props.getCurrentWeather();
         this.props.getHourlyForecast();
+        this.props.getDailyForecast();
     }
 
     render() {
@@ -43,5 +45,6 @@ const MapStateToProps = (state) => {
 export default connect(MapStateToProps, {
     getCurrentDate,
     getCurrentWeather,
-    getHourlyForecast
+    getHourlyForecast,
+    getDailyForecast
 })(Header);
