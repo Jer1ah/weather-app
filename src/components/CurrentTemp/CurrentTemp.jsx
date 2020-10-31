@@ -2,14 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styles from './CurrentTemp.module.css';
 
-import image from '../../images/storm.svg';
+import icons from '../../images';
+import weatherIconSort from '../../functions';
 
 const CurrentTemp = (props) => {
+
     return (
         <div className={styles.currentTemp}>
-            <img src={image} alt="Weather Icon"/>
+            <img src={weatherIconSort(props.weatherIcon, icons)} alt="Weather Icon"/>
             <h3>{props.currentTemp}&deg;</h3>
-            <span>Thunderstorms</span>
+            <span>{props.currentCondtion}</span>
         </div>
     );
 };
@@ -17,7 +19,9 @@ const CurrentTemp = (props) => {
 const mapStateToProps = (state) => {
     if(state.currentWeather.Temperature) {
         return {
-            currentTemp: state.currentWeather.Temperature.Imperial.Value
+            currentTemp: state.currentWeather.Temperature.Imperial.Value,
+            currentCondtion: state.currentWeather.WeatherText,
+            weatherIcon: state.currentWeather.WeatherIcon
         };
     } else {
         return {};

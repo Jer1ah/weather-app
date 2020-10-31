@@ -4,7 +4,8 @@ import styles from './Hourly.module.css';
 
 import { getHours } from '../../actions';
 
-import image from '../../images/storm.svg';
+import icons from '../../images';
+import weatherIconSort from '../../functions';
 
 class Hourly extends Component {
     constructor(props) {
@@ -22,7 +23,7 @@ class Hourly extends Component {
             listItems = this.props.hours.map((item, index) => {
                 return <li className={styles.listItem}>
                             <h5>{item}</h5>
-                            <img src={image} alt="Weather Icon"/>
+                            <img src={weatherIconSort(this.props.hourlyForecast[index].WeatherIcon, icons)} alt="Weather Icon"/>
                             <span>{this.props.hourlyForecast[index].Temperature.Value}&deg;</span>
                         </li>
             });

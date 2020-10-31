@@ -4,7 +4,8 @@ import styles from './Futurecast.module.css';
 
 import { getDays } from '../../actions';
 
-import image from '../../images/cloudy.svg';
+import icons from '../../images';
+import weatherIconSort from '../../functions';
 
 class Futurecast extends Component {
     constructor(props) {
@@ -21,7 +22,7 @@ class Futurecast extends Component {
             listItems = this.props.daysOfWeek.map((item, index) => {
                 return <li className={styles.listItem}>
                     <h4>{item}</h4>
-                    <img src={image} alt="Weather Icon"/>
+                    <img src={weatherIconSort(this.props.dailyForecast[index].Day.Icon, icons)} alt="Weather Icon"/>
                     <div className={styles.highTemp}>
                         <span>high</span>
                         <h5>{this.props.dailyForecast[index].Temperature.Maximum.Value}&deg;</h5>
