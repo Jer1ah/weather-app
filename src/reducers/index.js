@@ -63,6 +63,15 @@ const dailyForecastReducer = (state=[], action) => {
     }
 };
 
+const userInputReducer = (state="", action) => {
+    switch(action.type) {
+        case 'GET_USER_INPUT':
+            return action.payload;
+        default:
+            return state;
+    }
+};
+
 export default combineReducers({
     currentDate: currentDateReducer,
     daysOfWeek: daysOfWeekReducer,
@@ -70,5 +79,6 @@ export default combineReducers({
     location: locationReducer,
     currentWeather: currentWeatherReducer,
     hourlyForecast: hourlyForecastReducer,
-    dailyForecast: dailyForecastReducer
+    dailyForecast: dailyForecastReducer,
+    userInput: userInputReducer
 });

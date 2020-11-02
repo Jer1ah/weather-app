@@ -17,6 +17,23 @@
     opacity: .9;
 }
 
+.button {
+    border: none;
+    color: white;
+    opacity: .9;
+    background-color: #5A1FCD;
+    letter-spacing: .1rem;
+    font-size: 1rem;
+    margin-left: .5rem;
+    border-radius: .3rem;
+    padding: .7rem 1.5rem;
+    outline: none;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
 ::-webkit-input-placeholder {
     color: white;
     font-weight: 500;

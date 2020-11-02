@@ -59,3 +59,10 @@ export const getDailyForecast = () => {
         dispatch({ type: 'GET_DAILY_FORECAST', payload: data.data.DailyForecasts });
     }
 };
+
+export const updateUserInput = (input) => {
+    return {
+        type: 'GET_USER_INPUT',
+        payload: input
+    }
+};
