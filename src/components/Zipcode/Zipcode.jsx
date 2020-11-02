@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styles from './Zipcode.module.css';
 
-import { getLocation, updateUserInput } from '../../actions';
+import { getLocation, 
+         updateUserInput,
+         getDailyForecast,
+         getCurrentWeather,
+         getHourlyForecast
+} from '../../actions';
 
 class Zipcode extends Component {
     constructor(props) {
@@ -10,9 +15,16 @@ class Zipcode extends Component {
         this.userInput = React.createRef();
     }
 
-    componentDidMount() {
-        this.props.getLocation();
-        console.log(this.userInput.current.value);
+    shouldComponentUpdate(nextProps) {
+        if(nextProps.locationInfo.Key !== this.props.locationInfo.Key) {
+            this.props.getDailyForecast(this.props.locationInfo.Key);
+            this.props.getHourlyForecast(this.props.locationInfo.Key);
+            this.props.getCurrentWeather(this.props.locationInfo.Key);
+        }
+    }
+
+    getLocationHandler = (input) => {
+        this.props.getLocation(input);
     }
 
     render() {
@@ -24,7 +36,9 @@ class Zipcode extends Component {
                        placeholder="enter zipcode"
                        onKeyUp={() => this.props.updateUserInput(this.userInput.current.value)}
                 />
-                <button className={styles.button}>Get Weather</button>
+                <button className={styles.button}
+                        onClick={() => this.getLocationHandler(this.props.userInput)}
+                >Get Weather</button>
             </div>
         );
     }
@@ -32,11 +46,15 @@ class Zipcode extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        locationInfo: state.location
+        locationInfo: state.location,
+        userInput: state.userInput
     }
 };
 
 export default connect(mapStateToProps, {
     getLocation,
-    updateUserInput
+    updateUserInput,
+    getCurrentWeather,
+    getDailyForecast,
+    getHourlyForecast
 })(Zipcode);

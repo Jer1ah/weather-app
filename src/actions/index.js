@@ -32,30 +32,30 @@ export const getHours = () => {
     }
 };
 
-export const getLocation = () => {
+export const getLocation = (zipcode) => {
     return async (dispatch) => {
-        const data = await axios.get(`http://dataservice.accuweather.com/locations/v1/postalcodes/search?apikey=yjhc9euukkwR393enGgBNNlSaIA1i0T4&q=28124`);
+        const data = await axios.get(`http://dataservice.accuweather.com/locations/v1/postalcodes/search?apikey=yjhc9euukkwR393enGgBNNlSaIA1i0T4&q=${zipcode}`);
         dispatch({ type: 'GET_LOCATION', payload: data.data[0] });
     }
 };
 
-export const getCurrentWeather = () => {
+export const getCurrentWeather = (zipcode) => {
     return async (dispatch) => {
-        const data = await axios.get(`http://dataservice.accuweather.com/currentconditions/v1/11694_PC?apikey=yjhc9euukkwR393enGgBNNlSaIA1i0T4&details=true`);
+        const data = await axios.get(`http://dataservice.accuweather.com/currentconditions/v1/${zipcode}?apikey=yjhc9euukkwR393enGgBNNlSaIA1i0T4&details=true`);
         dispatch({ type: 'GET_CURRENT_WEATHER', payload: data.data[0] });
     };
 };
 
-export const getHourlyForecast = () => {
+export const getHourlyForecast = (zipcode) => {
     return async (dispatch) => {
-        const data = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/11694_PC?apikey=yjhc9euukkwR393enGgBNNlSaIA1i0T4`);
+        const data = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${zipcode}?apikey=yjhc9euukkwR393enGgBNNlSaIA1i0T4`);
         dispatch({ type: 'GET_HOURLY_FORECAST', payload: data.data });
     }
 };
 
-export const getDailyForecast = () => {
+export const getDailyForecast = (zipcode) => {
     return async (dispatch) => {
-        const data = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/11694_PC?apikey=yjhc9euukkwR393enGgBNNlSaIA1i0T4&details=true`);
+        const data = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${zipcode}?apikey=yjhc9euukkwR393enGgBNNlSaIA1i0T4&details=true`);
         dispatch({ type: 'GET_DAILY_FORECAST', payload: data.data.DailyForecasts });
     }
 };
