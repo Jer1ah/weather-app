@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .list {
@@ -44,4 +45,13 @@
 .listItem span {
     font-size: 1.85rem;
     font-weight: 600;
+}
+
+/*-- media queries --*/
+@media(max-width: 1025px) {
+    .hourly {
+        margin-top: 0;
+        width: 90%;
+        margin-left: .5rem;
+    }
 }

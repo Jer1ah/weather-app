@@ -3,7 +3,6 @@
     position: relative;
     height: 12rem;
     width: 92%;
-    margin-bottom: 1rem;
 }
 
 .currentTemp img {
@@ -36,4 +35,13 @@
     font-size: 1rem;
     letter-spacing: .1rem;
     color: white;
+}
+
+/*-- media queries --*/
+@media(max-width: 1025px) {
+    .currentTemp {
+        height: 13rem;
+        width: 90%;
+        margin-right: .5rem;
+    }
 }

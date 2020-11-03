@@ -4,8 +4,8 @@
     max-width: 95%;
     margin-top: 2.5rem;
     border-radius: .3rem;
-    height: 35rem;
     overflow: hidden;
+    margin-bottom: 2.5rem;
 }
 
 .wrapper {
@@ -13,5 +13,12 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    margin-top: 1rem;
+    margin: 1rem 0;
+}
+
+/*-- media queries --*/
+@media(max-width: 1025px) {
+    .wrapper {
+        flex-direction: column;
+    }
 }

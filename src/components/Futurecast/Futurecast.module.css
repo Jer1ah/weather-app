@@ -53,3 +53,15 @@
     opacity: .75;
     letter-spacing: .1rem;
 }
+
+/*-- media queries --*/
+@media(max-width: 1025px) {
+    .futurecast {
+        width: 95%;
+        margin: 1rem auto 0;
+    }
+
+    .list {
+        width: 100%;
+    }
+}
