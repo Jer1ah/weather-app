@@ -17,14 +17,15 @@ class Zipcode extends Component {
 
     shouldComponentUpdate(nextProps) {
         if(nextProps.locationInfo.Key !== this.props.locationInfo.Key) {
-            this.props.getDailyForecast(this.props.locationInfo.Key);
-            this.props.getHourlyForecast(this.props.locationInfo.Key);
-            this.props.getCurrentWeather(this.props.locationInfo.Key);
+            this.props.getDailyForecast(nextProps.locationInfo.Key);
+            this.props.getHourlyForecast(nextProps.locationInfo.Key);
+            this.props.getCurrentWeather(nextProps.locationInfo.Key);
         }
     }
 
     getLocationHandler = (input) => {
         this.props.getLocation(input);
+        this.userInput.current.value = "";
     }
 
     render() {

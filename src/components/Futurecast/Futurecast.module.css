@@ -65,3 +65,9 @@
         width: 100%;
     }
 }
+
+@media(max-width: 825px) {
+    .rainChance {
+        display: none;
+    }
+}

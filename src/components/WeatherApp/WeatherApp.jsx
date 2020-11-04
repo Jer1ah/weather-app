@@ -23,7 +23,7 @@ class WeatherApp extends Component {
         this.props.getCurrentWeather('11739_PC');
         this.props.getHourlyForecast('11739_PC');
         this.props.getDailyForecast('11739_PC');
-        this.props.getLocation(28124);
+        this.props.getLocation(28214);
     }
 
     render() {
