@@ -8,10 +8,6 @@ import icons from '../../images';
 import weatherIconSort from '../../functions';
 
 class Futurecast extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         this.props.getDays();
     }
@@ -20,7 +16,7 @@ class Futurecast extends Component {
         let listItems;
         if(this.props.dailyForecast[0]) {
             listItems = this.props.daysOfWeek.map((item, index) => {
-                return <li className={styles.listItem}>
+                return <li className={styles.listItem} key={this.props.dailyForecast[index].EpochDate}>
                     <h4>{item}</h4>
                     <img src={weatherIconSort(this.props.dailyForecast[index].Day.Icon, icons)} alt="Weather Icon"/>
                     <div className={styles.highTemp}>

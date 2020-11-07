@@ -20,7 +20,9 @@ class Zipcode extends Component {
             this.props.getDailyForecast(nextProps.locationInfo.Key);
             this.props.getHourlyForecast(nextProps.locationInfo.Key);
             this.props.getCurrentWeather(nextProps.locationInfo.Key);
-        }
+            return true;
+        } 
+        return false;
     }
 
     getLocationHandler = (input) => {

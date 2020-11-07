@@ -8,10 +8,6 @@ import icons from '../../images';
 import weatherIconSort from '../../functions';
 
 class Hourly extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         this.props.getHours();
     }
@@ -21,7 +17,7 @@ class Hourly extends Component {
 
         if(this.props.hourlyForecast[1]) {
             listItems = this.props.hours.map((item, index) => {
-                return <li className={styles.listItem}>
+                return <li className={styles.listItem} key={this.props.hourlyForecast[index].EpochDateTime}>
                             <h5>{item}</h5>
                             <img src={weatherIconSort(this.props.hourlyForecast[index].WeatherIcon, icons)} alt="Weather Icon"/>
                             <span>{this.props.hourlyForecast[index].Temperature.Value}&deg;</span>

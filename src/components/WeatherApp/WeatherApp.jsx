@@ -14,10 +14,6 @@ import { getCurrentDate,
 } from '../../actions';
 
 class WeatherApp extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         this.props.getCurrentDate();
         this.props.getCurrentWeather('11739_PC');
