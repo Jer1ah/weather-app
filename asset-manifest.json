@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/weather-app/static/css/main.d538b7e6.chunk.css",
+    "main.js": "/weather-app/static/js/main.1026b830.chunk.js",
+    "main.js.map": "/weather-app/static/js/main.1026b830.chunk.js.map",
+    "runtime-main.js": "/weather-app/static/js/runtime-main.e6f382d7.js",
+    "runtime-main.js.map": "/weather-app/static/js/runtime-main.e6f382d7.js.map",
+    "static/js/2.95514ff9.chunk.js": "/weather-app/static/js/2.95514ff9.chunk.js",
+    "static/js/2.95514ff9.chunk.js.map": "/weather-app/static/js/2.95514ff9.chunk.js.map",
+    "index.html": "/weather-app/index.html",
+    "precache-manifest.34dcf4b3eba3b2ffd284b4d9df6e130c.js": "/weather-app/precache-manifest.34dcf4b3eba3b2ffd284b4d9df6e130c.js",
+    "service-worker.js": "/weather-app/service-worker.js",
+    "static/css/main.d538b7e6.chunk.css.map": "/weather-app/static/css/main.d538b7e6.chunk.css.map",
+    "static/js/2.95514ff9.chunk.js.LICENSE.txt": "/weather-app/static/js/2.95514ff9.chunk.js.LICENSE.txt",
+    "static/media/cloudy.svg": "/weather-app/static/media/cloudy.bfd87d49.svg",
+    "static/media/moon.svg": "/weather-app/static/media/moon.98a800c9.svg",
+    "static/media/partly-cloudy-night.svg": "/weather-app/static/media/partly-cloudy-night.2029286b.svg",
+    "static/media/partly-cloudy.svg": "/weather-app/static/media/partly-cloudy.bdfd9066.svg",
+    "static/media/rain.svg": "/weather-app/static/media/rain.5fcdec4d.svg",
+    "static/media/snow.svg": "/weather-app/static/media/snow.a88d50f6.svg",
+    "static/media/sun.svg": "/weather-app/static/media/sun.e1bb2cc7.svg",
+    "static/media/thunderstorm.svg": "/weather-app/static/media/thunderstorm.381339ec.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e6f382d7.js",
+    "static/js/2.95514ff9.chunk.js",
+    "static/css/main.d538b7e6.chunk.css",
+    "static/js/main.1026b830.chunk.js"
+  ]
+}
