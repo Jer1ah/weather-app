@@ -55,3 +55,10 @@
         margin-left: .5rem;
     }
 }
+
+@media(max-width: 675px) {
+    .hourly {
+        margin: 0;
+        width: 100%;
+    }
+}
