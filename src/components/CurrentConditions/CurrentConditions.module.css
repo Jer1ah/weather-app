@@ -16,7 +16,7 @@
     }
 }
 
-@media(max-width: 675px) {
+@media(max-width: 725px) {
     .currentConditions {
         flex-direction: column;
     }

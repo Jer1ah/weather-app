@@ -5,8 +5,10 @@ import styles from './Header.module.css';
 const Header = (props) => {
     return (
         <div className={styles.header}>
-            <h2>{props.city}, {props.state}</h2>
-            <span>{props.currentDate}</span>
+            <div className={styles.wrapper}>
+                <h2>{props.city}, {props.state}</h2>
+                <span>{props.currentDate}</span>
+            </div> 
         </div>
     );
 };

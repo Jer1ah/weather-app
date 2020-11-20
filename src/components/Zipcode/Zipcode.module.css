@@ -1,5 +1,5 @@
 .zipcode {
-    margin-top: 2.5rem;
+    margin: 2.5rem auto 2rem;
 }
 
 .input {
@@ -43,16 +43,17 @@
 }
 
 /*-- media queries --*/
-@media(max-width: 675px) {
+@media(max-width: 725px) {
     .zipcode {
         display: flex;
         flex-direction: column;
         width: 95%;
+        margin: 2rem auto 1.25rem;
     }
 
     .input {
         width: 100%;
-        margin: 0 0 1rem;
+        margin: 0 0 .75rem;
         height: 3.3rem;
         text-align: center;
         text-indent: 0;
