@@ -33,15 +33,17 @@ class Zipcode extends Component {
     render() {
         return (
             <div className={styles.zipcode}>
-                <input type="text" 
-                       ref={this.userInput} 
-                       className={styles.input} 
-                       placeholder="enter zipcode"
-                       onKeyUp={() => this.props.updateUserInput(this.userInput.current.value)}
-                />
-                <button className={styles.button}
-                        onClick={() => this.getLocationHandler(this.props.userInput)}
-                >Get Weather</button>
+                <div className={styles.wrapper}>
+                    <input type="text" 
+                        ref={this.userInput} 
+                        className={styles.input} 
+                        placeholder="enter zipcode"
+                        onKeyUp={() => this.props.updateUserInput(this.userInput.current.value)}
+                    />
+                    <button className={styles.button}
+                            onClick={() => this.getLocationHandler(this.props.userInput)}
+                    >Get Weather</button>
+                </div>
             </div>
         );
     }

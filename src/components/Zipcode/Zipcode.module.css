@@ -1,11 +1,24 @@
 .zipcode {
     margin: 2.5rem auto 2rem;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 30rem;
+    max-width: 100%;
 }
 
 .input {
     background-color: #5A1FCD;
     border: none;
-    width: 20rem;
+    width: 65%;
     height: 2.5rem;
     border-radius: .3rem;
     outline: none;
@@ -24,9 +37,9 @@
     background-color: #5A1FCD;
     letter-spacing: .1rem;
     font-size: 1rem;
-    margin-left: .5rem;
     border-radius: .3rem;
-    padding: .7rem 1.5rem;
+    padding: .7rem 0;
+    width: 32%;
     outline: none;
 }
 
@@ -44,11 +57,9 @@
 
 /*-- media queries --*/
 @media(max-width: 725px) {
-    .zipcode {
-        display: flex;
+    .wrapper {
         flex-direction: column;
-        width: 95%;
-        margin: 2rem auto 1.25rem;
+        min-width: 100%;
     }
 
     .input {
