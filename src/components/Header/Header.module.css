@@ -4,6 +4,15 @@
     color: white;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin: 1rem 0;
+    padding-left: 1.25rem;
+}
+
 .header h2 {
     font-size: 1.75rem;
     font-weight: 600;
@@ -18,12 +27,4 @@
     opacity: .75;
     letter-spacing: .1rem;
     display: inline-block;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 95%;
-    margin: 1rem auto;
 }

@@ -56,7 +56,7 @@
     }
 }
 
-@media(max-width: 725px) {
+@media(max-width: 800px) {
     .hourly {
         margin: 0;
         width: 100%;
