@@ -1,6 +1,6 @@
 .hourly {
     height: 13rem;
-    background-color: #652BD7;
+    background-color: rgba(101,43,215,.75);
     width: 92%;
     border-radius: .3rem;
     display: flex;
@@ -24,7 +24,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #5A1FCD;
+    background-color: rgba(90,31,205, .75);
     color: white;
     width: 30.5%;
     height: 100%;

@@ -16,7 +16,7 @@
 }
 
 .input {
-    background-color: #5A1FCD;
+    background-color: rgba(101,43,215,.65);
     border: none;
     width: 65%;
     height: 2.5rem;
@@ -27,14 +27,13 @@
     letter-spacing: .1rem;
     font-size: 1rem;
     text-indent: .5rem;
-    opacity: .9;
 }
 
 .button {
     border: none;
     color: white;
     opacity: .9;
-    background-color: #5A1FCD;
+    background-color: rgba(101,43,215,.65);
     letter-spacing: .1rem;
     font-size: 1rem;
     border-radius: .3rem;

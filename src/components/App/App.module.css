@@ -11,7 +11,6 @@ html {
 body {
     font-size: 62.5%;
     font-family: 'Montserrat', sans-serif;
-    background-color: #4D11C4;
 }
 
 .app {
@@ -19,4 +18,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: url("../../images/modern-purple-moon.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
